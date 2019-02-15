@@ -1,0 +1,34 @@
+package br.com.fiap.bo;
+
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
+import br.com.fiap.bean.Produto;
+
+public class EstoqueBO {
+	private Properties properties;
+	
+	public  Produto consultarProduto(int cod){
+		
+		if (cod == 401) {
+			System.out.println("Camiseta Branca");
+		} else if (cod == 402) {
+			System.out.println("Camiseta Azul");
+		} else if (cod == 403) {
+			System.out.println("Camiseta Rosa");
+		} else {
+			System.out.println("Produto não Encontrado");
+		}
+		
+		properties= new Properties();
+		
+		
+		
+		return null;
+		
+		
+	}
+
+}

@@ -1,0 +1,3 @@
+INDEX VERSION 1.130+/home/developr/Documents/Aulas/faculdade/2-Ano/DIGITALBUSINESSENABLEMENT/.metadata/.plugins/org.eclipse.jdt.core
+1953103802.index
+2673755321.index

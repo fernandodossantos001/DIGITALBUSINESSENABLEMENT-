@@ -1,0 +1,19 @@
+package br.com.fiap.teste;
+
+import java.io.FileInputStream;
+import java.util.Properties;
+
+public class Teste {
+	
+	
+	private Properties properties;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		FileInputStream file = new FileInputStream("fernando.txt");
+		properties.load(file);
+	}
+
+}

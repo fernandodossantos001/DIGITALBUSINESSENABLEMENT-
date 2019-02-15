@@ -1,0 +1,25 @@
+package br.com.fiap.bo;
+
+
+import br.com.fiap.bean.Produto;
+
+public class EstoqueBO {
+	
+	public static Produto consultarProduto(int cod){
+		
+		if (cod == 401) {
+			System.out.println("Camiseta Branca");
+		} else if (cod == 402) {
+			System.out.println("Camiseta Azul");
+		} else if (cod == 403) {
+			System.out.println("Camiseta Rosa");
+		} else {
+			System.out.println("Produto não Encontrado");
+		}
+		
+		return new Produto(401, "Camiseta Branca", 10, 1);
+		
+		
+	}
+
+}
