@@ -1,22 +1,34 @@
 package br.com.fiap.teste;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.util.Properties;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+import javax.swing.JOptionPane;
+
+import br.com.fiap.bean.Produto;
+import br.com.fiap.bo.EstoqueBO;
+import br.com.fiap.singleton.PropertySingleton;
 
 public class Teste {
 	
 	
-	private static Properties properties;
 
 	public static void main(String[] args)throws Exception {
 		// TODO Auto-generated method stub
 		
+		String nome = PropertySingleton.getInstance().getProperty("nome");
 		
-		FileInputStream file = new FileInputStream(new File("fernando.txt"));
-		properties.load(file);
+		LocalDate hoje = LocalDate.now();
+		DateTimeFormatter formatador = DateTimeFormatter.ofPattern(PropertySingleton.getInstance().getProperty("mascara"));
 		
-		System.out.println(properties.toString());	
+		System.out.println(nome + " " + hoje.format(formatador));
+		
+		int cd = Integer.parseInt(JOptionPane.showInputDialog("Informe o código da loja"));
+	
+		Produto produto = EstoqueBO.consultarProduto(cd);
+		
+		System.out.println(produto.getDescricao());
 		
 		
 	}

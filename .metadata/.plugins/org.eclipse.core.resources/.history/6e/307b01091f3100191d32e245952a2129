@@ -1,0 +1,26 @@
+package br.com.fiap.teste;
+
+import java.util.Properties;
+
+import br.com.fiap.bean.Produto;
+import br.com.fiap.bo.EstoqueBO;
+
+public class Teste {
+	
+	
+
+	public static void main(String[] args)throws Exception {
+		// TODO Auto-generated method stub
+		
+		
+		
+	
+		
+		Produto produto = EstoqueBO.consultarProduto(402);
+		
+		System.out.println(produto.getDescricao());
+		
+		
+	}
+
+}

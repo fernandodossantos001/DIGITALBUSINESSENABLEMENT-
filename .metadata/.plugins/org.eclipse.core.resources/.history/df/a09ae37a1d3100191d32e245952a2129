@@ -1,0 +1,27 @@
+package br.com.fiap.bo;
+
+
+import java.io.FileInputStream;
+import java.util.Properties;
+
+import br.com.fiap.bean.Produto;
+
+public class EstoqueBO {
+	private Properties properties;
+	
+	public  Produto consultarProduto(int cod)throws Exception{
+		
+		if (cod == 401) {
+			return new Produto("Camiseta Branca" , 2.99 ,2);
+		} else if (cod == 402) {
+			return new Produto("Camiseta Azul");
+		} else if (cod == 403) {
+			return new Produto("Camiseta Rosa");
+		} else {
+			return new Produto();
+		}
+		
+		
+	}
+
+}

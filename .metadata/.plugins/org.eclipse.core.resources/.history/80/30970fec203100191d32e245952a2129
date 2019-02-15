@@ -1,0 +1,36 @@
+package br.com.fiap.teste;
+
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+import javax.swing.JOptionPane;
+
+import br.com.fiap.bean.Produto;
+import br.com.fiap.bo.EstoqueBO;
+import br.com.fiap.singleton.PropertySingleton;
+
+public class Teste {
+	
+	
+
+	public static void main(String[] args)throws Exception {
+		// TODO Auto-generated method stub
+		
+		String nome = PropertySingleton.getInstance().getProperty("nome");
+		
+		LocalDate hoje = LocalDate.now();
+		DateTimeFormatter formatador = DateTimeFormatter.ofPattern(PropertySingleton)
+		
+		System.out.println(nome);
+		
+		int cd = Integer.parseInt(JOptionPane.showInputDialog("Informe o código da loja"));
+	
+		Produto produto = EstoqueBO.consultarProduto(cd);
+		
+		System.out.println(produto.getDescricao());
+		
+		
+	}
+
+}

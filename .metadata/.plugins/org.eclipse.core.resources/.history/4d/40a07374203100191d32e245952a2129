@@ -1,0 +1,29 @@
+package br.com.fiap.teste;
+
+
+import br.com.fiap.bean.Produto;
+import br.com.fiap.bo.EstoqueBO;
+import br.com.fiap.singleton.PropertySingleton;
+
+public class Teste {
+	
+	
+
+	public static void main(String[] args)throws Exception {
+		// TODO Auto-generated method stub
+		
+		String nome = PropertySingleton.getInstance().getProperty("nome");
+		
+		System.out.println(nome);
+		
+		
+	
+		
+		Produto produto = EstoqueBO.consultarProduto(402);
+		
+		System.out.println(produto.getDescricao());
+		
+		
+	}
+
+}
